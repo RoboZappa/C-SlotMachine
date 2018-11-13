@@ -31,7 +31,7 @@ namespace Exam2
             Slot mySlot2 = new Slot(rand);
             picBx2.Image = mySlot2.Picture;
 
-            mySlot2 = CheckSlots(mySlot1, mySlot2);
+           //mySlot2 = CheckSlots(mySlot1, mySlot2);
 
             Slot mySlot3 = new Slot(rand);
             picBx3.Image = mySlot3.Picture;
@@ -65,7 +65,7 @@ namespace Exam2
                 mySlot2.PictureValue == mySlot3.PictureValue ||
                 mySlot1.PictureValue == mySlot3.PictureValue)
             {
-                lblMessage.Text = "Not bad stranger, here's a nickel \n* 0.05 Added to Cash *";
+                lblMessage.Text = "Not bad stranger, here's a nickel \n* 0.10 Added to Cash *";
                 myGambler.Cash += .10;
                 txtBtnCurrentCash.Text = myGambler.Cash.ToString();
                 myGambler.Gain += .10;
@@ -74,7 +74,7 @@ namespace Exam2
             // Complete Failure 
             else
             {
-                lblMessage.Text = "Better luck next time stranger... \n* 1.50 Deducted from Cash *";
+                lblMessage.Text = "Better luck next time stranger... \n* 1.00 Deducted from Cash *";
                 myGambler.Cash -= 1.00;
                 txtBtnCurrentCash.Text = myGambler.Cash.ToString();
                 myGambler.Loss -= 1.00;
